@@ -14,7 +14,10 @@ use App\Http\Controllers\SkillController;
 |
 */
 
-Route::get('/', [SkillController::class, 'index']);
+Route::get('/', [HomeController::class, 'index']);
+Route::get('/skills', [SkillController::class, 'index']);
+Route::get('/project', [ProjectController::class, 'index']);
+Route::get('/experience', [ExperienceController::class, 'index']);
 
 Route::get('/about', function () {
     return view('about');
