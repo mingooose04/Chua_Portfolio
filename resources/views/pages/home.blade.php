@@ -4,29 +4,17 @@
 
 @section('content')
 
-<div class="container mt-4">
-    <h2>My skills</h2>
+<div class ="row align-items-center">
+    <div class="col-md-4 text-center">
+        <img>
+    </div>
 
-    <table class="table table-bordered">
-        <thead>
-            <tr>
-                <th>Skill</th>
-                <th>Level</th>
+    <div class="col-md-8">
+        <h1>{{ $profile->first_name}}</h1>
 
-            </tr>
-        </thead>
-        <tbody>
-            @foreach($skills as $skill)
-            <tr>
-                <td>
-                    {{ $skill->name}}
-                </td>
-                <td>
-                    {{ $skill->level}}
-                </td>
-            </tr>
-            @endforeach
-        </tbody>
-    </table>
+        <ul class="list-unstyled">
+
+        </ul>
+    </div>
 </div>
 @endsection
