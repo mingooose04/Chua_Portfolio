@@ -11,6 +11,6 @@ class SkillController extends Controller
     {
         $skills = Skill::all();
 
-        return view('page.skills', compact('skills'));
+        return view('pages.skills', compact('skills'));
     }
 }

@@ -19,7 +19,7 @@ use App\Http\Controllers\ExperienceController;
 
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/skills', [SkillController::class, 'index']);
-Route::get('/project', [ProjectController::class, 'index']);
+Route::get('/projects', [ProjectController::class, 'index']);
 Route::get('/experience', [ExperienceController::class, 'index']);
 
 

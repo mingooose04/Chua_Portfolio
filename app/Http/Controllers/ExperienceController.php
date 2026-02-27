@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Experience;
 
 class ExperienceController extends Controller
 {
@@ -10,7 +11,7 @@ class ExperienceController extends Controller
     {
         $experience = Experience::all();
 
-        return view('page.experience', compact('experience'));
+        return view('pages.experience', compact('experience'));
     }
 }
 
