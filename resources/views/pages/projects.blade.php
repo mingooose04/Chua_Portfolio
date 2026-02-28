@@ -18,7 +18,7 @@
 
                         {{-- Single thumbnail per project --}}
                         @if(!empty($project->image))
-                            <img src="projects/bustabeat.png"
+                            <img src="{{ $project->image }}"
                                  class="card-img-top" 
                                  alt="{{ $project->title }}">
                         @else
