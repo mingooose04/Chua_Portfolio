@@ -15,8 +15,12 @@
             @foreach($projects as $project)
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="card h-100 shadow-sm">
+
+                        {{-- Single thumbnail per project --}}
                         @if(!empty($project->image))
-                            <img src="{{ asset('storage/' . $project->image) }}" class="card-img-top" alt="{{ $project->title }}">
+                            <img src="projects/bustabeat.png"
+                                 class="card-img-top" 
+                                 alt="{{ $project->title }}">
                         @else
                             <div class="bg-light d-flex align-items-center justify-content-center" style="height:180px;">
                                 <span class="text-muted">No image</span>
@@ -37,7 +41,10 @@
                                     <div class="mb-2">
                                         @foreach($project->technologies as $tech)
                                             @if(!empty($tech->image))
-                                                <img src="{{ asset('storage/' . $tech->image) }}" alt="{{ $tech->name }}" title="{{ $tech->name }}" class="me-2" style="height:28px;">
+                                                <img src="{{ asset('storage/' . $tech->image) }}" 
+                                                     alt="{{ $tech->name }}" 
+                                                     title="{{ $tech->name }}" 
+                                                     class="me-2" style="height:28px;">
                                             @else
                                                 <span class="badge bg-secondary me-1">{{ $tech->name }}</span>
                                             @endif
@@ -46,7 +53,9 @@
                                 @elseif(!empty($project->tech_images) && is_array($project->tech_images))
                                     <div class="mb-2">
                                         @foreach($project->tech_images as $img)
-                                            <img src="{{ asset('storage/' . $img) }}" alt="tech" class="me-2" style="height:28px;">
+                                            <img src="{{ asset('storage/' . $img) }}" 
+                                                 alt="tech" 
+                                                 class="me-2" style="height:28px;">
                                         @endforeach
                                     </div>
                                 @else
@@ -56,12 +65,6 @@
                                         @endif
                                     @endforeach
                                 @endif
-
-                                <div class="d-flex justify-content-between align-items-center mt-2">
-                                    {{-- Removed the "View" link to avoid requiring projects.show --}}
-                                    <button class="btn btn-sm btn-outline-secondary" disabled>Details</button>
-                                    <small class="text-muted">Updated {{ optional($project->updated_at)->diffForHumans() ?? '—' }}</small>
-                                </div>
                             </div>
                         </div>
                     </div>

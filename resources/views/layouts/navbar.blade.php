@@ -1,39 +1,22 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
-    <div class="container">
-        <a class="navbar-brand" href="{{ url('/') }}">
-            {{ config('app.name', 'MyPortfolio') }}
-        </a>
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
-                aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="mainNavbar">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+<nav class="navbar navbar-expand-lg justify-content-center mt-3 mb-5 sticky-top">
+    <div class="nav-pill">
+        <div class="collapse navbar-collapse show" id="mainNavbar">
+            <ul class="navbar-nav gap-4 px-4 py-2 bg-black rounded-pill shadow-lg">
                 <li class="nav-item">
-                    <a class="nav-link {{ Request::is('/') ? 'active' : '' }}" href="{{ url('/') }}"
-                       aria-current="{{ Request::is('/') ? 'page' : '' }}">Home</a>
+                    <a class="nav-link text-white {{ Request::is('home*') ? 'active' : '' }}" href="{{ url('/') }}">About</a>
                 </li>
-
                 <li class="nav-item">
-                    <a class="nav-link {{ Request::is('projects*') ? 'active' : '' }}" href="{{ url('/projects') }}"
-                       aria-current="{{ Request::is('projects*') ? 'page' : '' }}">Projects</a>
+                    <a class="nav-link text-white {{ Request::is('projects*') ? 'active' : '' }}" href="{{ url('/projects') }}">Projects</a>
                 </li>
-
                 <li class="nav-item">
-                    <a class="nav-link {{ Request::is('skills*') ? 'active' : '' }}" href="{{ url('/skills') }}"
-                       aria-current="{{ Request::is('skills*') ? 'page' : '' }}">Skills</a>
+                    <a class="nav-link text-white {{ Request::is('skills*') ? 'active' : '' }}" href="{{ url('/skills') }}">Skills</a>
                 </li>
-
                 <li class="nav-item">
-                    <a class="nav-link {{ Request::is('experience*') ? 'active' : '' }}" href="{{ url('/experience') }}"
-                       aria-current="{{ Request::is('experience*') ? 'page' : '' }}">Experience</a>
+                    <a class="nav-link text-white  {{ Request::is('experience*') ? 'active' : '' }}" href="{{ url('/experience') }}">Experience</a>
                 </li>
-
                 <li class="nav-item">
-                    <a class="nav-link {{ Request::is('contact*') ? 'active' : '' }}" href="{{ url('/contact') }}"
-                       aria-current="{{ Request::is('contact*') ? 'page' : '' }}">Contacts</a>
+                    <a class="nav-link text-white  {{ Request::is('contact*') ? 'active' : '' }}" href="{{ url('/contact') }}">Contact</a>
                 </li>
             </ul>
         </div>

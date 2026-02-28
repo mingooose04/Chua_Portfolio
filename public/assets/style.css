@@ -1,0 +1,106 @@
+@font-face {
+  font-family: "SF Pro Display";
+  src: local("SF Pro Display");
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  font-family: "SF Pro Display", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* ABOUT PAGE */
+.main-image {
+    position: relative; /* positioning context */
+    width: auto;        /* full width */
+    margin: 0;
+    padding: 0;
+}
+
+.main-image img {
+    display: block;
+    width: auto;        /* stretches edge-to-edge */
+    margin: 0;
+    padding: 0;
+}
+
+.main-text {
+    position: absolute;
+    bottom: 1px;   /* up from bottom */
+    right: 40px;    /* in from right */
+    color: rgb(0, 0, 0);
+    z-index: 2;
+    text-align: right;
+}
+
+
+.main-text h1 {
+    font-size: 60px;
+}
+
+.main-text p {
+    font-size: 20px;
+    color: #a8a8a8;
+}
+
+.about {
+    position: relative;
+    bottom: 10rem;
+}
+.about-text {
+    font-size: 80px;
+    text-align: center;
+    margin-top: 0%;
+    padding-top: 0%;
+}
+
+.bio {
+    font-size: 20px;
+    color: #000000;
+    text-align: justify;
+    margin-top: 5rem;
+    padding-right: 20rem;
+}
+
+.location {
+    padding-left: 20rem;
+    margin-top: 20px;
+}
+.carousel {
+    width: 90%;
+    height:80%;
+    
+}
+
+.list-unstyled {
+    margin-top: 2rem;
+}
+.contact-item {
+    display: flex;        /* places icon + text side by side */
+    align-items: center;  /* vertically aligns them */
+    margin-bottom: 10px;  /* spacing between items */
+}
+
+.contact-item .icon {
+    width: 25px;          /* adjust size */
+    height: auto;
+    margin-right: 8px;    /* space between icon and text */
+}
+
+
+.buttons {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.buttons .btn {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 12px 24px;
+    border-color: #000000;
+    border-width: 2px;
+    color: #000000;
+    text-decoration: none;
+    border-radius: 20px;
+    
+}
