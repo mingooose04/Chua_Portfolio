@@ -32,13 +32,8 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link {{ Request::is('about*') ? 'active' : '' }}" href="{{ url('/about') }}"
-                       aria-current="{{ Request::is('about*') ? 'page' : '' }}">About</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link {{ Request::is('contacts*') ? 'active' : '' }}" href="{{ url('/contacts') }}"
-                       aria-current="{{ Request::is('contacts*') ? 'page' : '' }}">Contacts</a>
+                    <a class="nav-link {{ Request::is('contact*') ? 'active' : '' }}" href="{{ url('/contact') }}"
+                       aria-current="{{ Request::is('contact*') ? 'page' : '' }}">Contacts</a>
                 </li>
             </ul>
         </div>
