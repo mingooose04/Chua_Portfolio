@@ -20,8 +20,11 @@ use App\Http\Controllers\ContactController;
 
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/skills', [SkillController::class, 'index']);
-Route::get('/projects', [ProjectController::class, 'index']);
+Route::get('/projects', [ProjectController::class, 'index'])
+     ->middleware('custom.message');
 Route::get('/experience', [ExperienceController::class, 'index']);
 Route::get('/contact', [ContactController::class, 'index']);
+
+
 
 
