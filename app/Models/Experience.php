@@ -9,6 +9,7 @@ class Experience extends Model
 {
     protected $table = 'experience';
     protected $fillable = [
+        'image',
         'title',
         'organization',
         'date',

@@ -21,7 +21,7 @@ class ProfileSeeder extends Seeder
                                     that blend technical structure with creative spark, whether I am crafting branding guides, prototyping in Figma, or just refining layouts.
                                     When I am not designing, you will find me deep in a comic panel, baking experimental desserts, binge-watching a series, or just vibing to a playlist that matches my current mood. 
                                     I believe design is like storytelling-clear, expressive and full of personality.',
-            'email' => 'Laravel',
+            'email' => 'chuagabrielle04@gmail.com',
             'location' => 'Bacolod City, Negros Occidental, Philippines']
         ]);
     }

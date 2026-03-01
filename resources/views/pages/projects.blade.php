@@ -14,7 +14,7 @@
         <div class="row g-4">
             @foreach($projects as $project)
                 <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card h-100 shadow-sm">
+                    <div class="card h-100 shadow scroll-element">
 
                         {{-- Single thumbnail per project --}}
                         @if(!empty($project->image))
@@ -81,4 +81,21 @@
         <div class="alert alert-info">No projects found.</div>
     @endif
 </div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const elements = document.querySelectorAll('.scroll-element');
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+                observer.unobserve(entry.target); // only animate once
+            }
+        });
+    }, { threshold: 0.1 }); // trigger when 10% visible
+
+    elements.forEach(el => observer.observe(el));
+});
+</script>
 @endsection

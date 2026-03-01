@@ -14,6 +14,7 @@ class ExperienceSeeder extends Seeder
     public function run(): void
     {
          DB::table('experience')->insert([
+              'image' => 'assets/huaming.jpg',
                 'title' => 'Highschool',
                 'organization' => 'St. John’s Institute',
                 'date' => '2017-2021',
@@ -22,6 +23,7 @@ class ExperienceSeeder extends Seeder
          ]);
 
         DB::table('experience')->insert([
+              'image' => 'assets/liceo.png',
                 'title' => 'Senior Highschool',
                 'organization' => 'University of St. La Salle - Liceo',
                 'date' => '2021-2022',
@@ -29,12 +31,14 @@ class ExperienceSeeder extends Seeder
          ]);
 
         DB::table('experience')->insert([
+              'image' => 'assets/css.jpg',
                 'title' => 'Cultural Officer',
                 'organization' => 'Computer Science Society - University of St. La Salle',
                 'date' => '2022-2023',
                 'description' => 'Participated in creating booths for school events.'
          ]);
         DB::table('experience')->insert([
+              'image' => 'assets/gdg.png',
                 'title' => 'Graphics Lead',
                 'organization' => 'Google Developer Groups on Campus - University of St. La Salle',
                 'date' => '2023-Present',
@@ -42,6 +46,7 @@ class ExperienceSeeder extends Seeder
          ]);
 
         DB::table('experience')->insert([
+              'image' => 'assets/usls.jpg',
                 'title' => 'College',
                 'organization' => 'University of St. La Salle - Liceo',
                 'date' => '2022-Present',

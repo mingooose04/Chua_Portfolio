@@ -26,7 +26,8 @@ body {
 
 .main-text {
     position: absolute;
-    bottom: 1px;   /* up from bottom */
+    bottom: 10px;   /* up from bottom */
+    padding-bottom: 180px;
     right: 40px;    /* in from right */
     color: rgb(0, 0, 0);
     z-index: 2;
@@ -48,28 +49,32 @@ body {
     bottom: 10rem;
 }
 .about-text {
-    font-size: 80px;
-    text-align: center;
+    font-size: 60px;
+    text-align: left;
     margin-top: 0%;
     padding-top: 0%;
+    margin-left: 5rem;
 }
 
 .bio {
-    font-size: 20px;
+    font-size: 30px;
     color: #000000;
     text-align: justify;
-    margin-top: 5rem;
-    padding-right: 20rem;
+    margin-top: 1rem;
+    padding-right: 15rem;
 }
 
 .location {
-    padding-left: 20rem;
+    padding-left: 5rem;
     margin-top: 20px;
 }
-.carousel {
-    width: 90%;
-    height:80%;
-    
+
+.image-about img {
+    width: 600px;        /* smaller size */
+    height: auto;        /* maintain aspect ratio */
+    border-radius: 20px; /* rounded corners */
+    display: block;
+    margin-bottom: 1rem; /* spacing below image */
 }
 
 .list-unstyled {
@@ -103,4 +108,32 @@ body {
     text-decoration: none;
     border-radius: 20px;
     
+}
+
+.badge-beginner {
+    background-color: #C49494;
+    color: #000000;
+}
+
+.badge-intermediate {
+    background-color: #CDC077;
+    color: #000; /* darker for readability on yellow */
+}
+
+.badge-advanced {
+    background-color: #7F9E81;
+    color: #000000;
+}
+
+/* Hidden by default */
+.scroll-element {
+    opacity: 0;
+    transform: translateY(50px); /* start 50px lower */
+    transition: all 0.8s ease-out; /* smooth animation */
+}
+
+/* When visible */
+.scroll-element.show {
+    opacity: 1;
+    transform: translateY(0); /* slide up into place */
 }
