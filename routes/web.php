@@ -24,6 +24,7 @@ Route::get('/projects', [ProjectController::class, 'index'])
      ->middleware('custom.message');
 Route::get('/experience', [ExperienceController::class, 'index']);
 Route::get('/contact', [ContactController::class, 'index']);
+Route::resource('/projects', ProjectController::class);
 
 
 

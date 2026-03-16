@@ -8,6 +8,7 @@
     <div class="d-flex justify-content-between align-items-center mb-3">
         <h2 class="mb-0">My Projects</h2>
         <small class="text-muted">{{ $projects->count() ?? 0 }} projects</small>
+        <a href="{{ route('projects.create') }}" class="btn btn-primary mb-3">Add New Project</a>
     </div>
 
     @if(isset($projects) && $projects->isNotEmpty())
@@ -67,6 +68,8 @@
                                 @endif
                             </div>
                         </div>
+
+                        <a href="{{ route('projects.edit', $project->id) }}" class="btn btn-warning mb-3"> Edit </a>
                     </div>
                 </div>
             @endforeach
